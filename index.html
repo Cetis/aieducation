@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
-  <title>Demo</title>
+  <title>LLM in Education Speculative Map Demo</title>
   <script type='module' src='www/build/cetis-components.esm.js'></script>
   <link rel="stylesheet" href="www/build/cetis-components.css" />
 
@@ -57,7 +57,12 @@
 
 
 <main>
-  <section>
+    <section>
+        <h1>Pillars and indicators primer</h1>
+        <p></p>
+    </section>
+
+    <section>
     <!-- these are all the properties you can set for the map -->
     <h1>Maps</h1>
     <p>The first example is a map with a filter. The filter is used to select a pillar to visualise.
@@ -66,7 +71,7 @@
     <div>
       <oi-filter
         label='Select a measure:'
-        data-src='data/test.json'
+        data-src='data/llm.json'
         column-name='@pillars'
       >
       </oi-filter>
@@ -75,7 +80,7 @@
       id='map'
       style='height:600px'
       measure-name='Effectiveness'
-      data-src='data/test_map.json'
+      data-src='data/llm_map.json'
       zoom='0'
       center-x='0'
       center-y='25'
@@ -89,7 +94,7 @@
     <h3>Theme-based colouring</h3>
     <oi-filter
       label='Select a measure:'
-      data-src='data/test.json'
+      data-src='data/llm.json'
       column-name='@pillars'
     >
     </oi-filter>
@@ -97,7 +102,7 @@
       id='map'
       style='height:600px'
       measure-name='Effectiveness'
-      data-src='data/test_map.json'
+      data-src='data/llm_map.json'
       zoom='0'
       center-x='0'
       center-y='25'
@@ -109,7 +114,7 @@
     <h3>Reverse colouring</h3>
     <oi-filter
       label='Select a measure:'
-      data-src='data/test.json'
+      data-src='data/llm.json'
       column-name='@pillars'
     >
     </oi-filter>
@@ -117,7 +122,7 @@
       id='map'
       style='height:600px'
       measure-name='Effectiveness'
-      data-src='data/test_map.json'
+      data-src='data/llm_map.json'
       zoom='0'
       center-x='0'
       center-y='25'
@@ -138,26 +143,26 @@
     <oi-filter
       name='country'
       label='Select a country:'
-      data-src='data/test.json'
+      data-src='data/llm.json'
       column-name='country'
       enable-search='true'
       description='Select a country to view in the chart below.'
     ></oi-filter>
     <oi-bar-chart
-      data-src='data/test.json'
+      data-src='data/llm.json'
       keys='@pillars'
     >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
     </oi-bar-chart>
     <p>We can also use theme colours:</p>
     <oi-bar-chart
-      data-src='data/test.json'
+      data-src='data/llm.json'
       keys='@pillars'
       use-theme='true'
     >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
     </oi-bar-chart>
     <p>We also have a smaller variant:</p>
     <oi-bar-chart
-      data-src='data/test.json'
+      data-src='data/llm.json'
       keys='@pillars'
       use-theme='true'
       size='small'
@@ -165,9 +170,9 @@
     </oi-bar-chart>
     <h1>Radial charts for country profiles</h1>
     <p>Examples below of 'country profile' views using a radial chart.</p>
-    <oi-country data-src='data/test_map.json'>
+    <oi-country data-src='data/llm_map.json'>
       <oi-radial-barchart
-        data-src='data/test.json'
+        data-src='data/llm.json'
         keys='@pillars'
         use-theme='true'
       >Select a country to view a chart of their pillars.</oi-radial-barchart>
@@ -183,7 +188,7 @@
     <oi-filter
       name='country'
       label='Select a country:'
-      data-src='data/test.json'
+      data-src='data/llm.json'
       column-name='country'
       enable-search='true'
       description='The country you select has its values shown as the blue bar in the chart below.'
@@ -191,7 +196,7 @@
     <oi-filter
       name='benchmark'
       label='Select a country to compare against:'
-      data-src='data/test.json'
+      data-src='data/llm.json'
       column-name='country'
       enable-search='true'
       enable-clear-selection='true'
@@ -203,13 +208,13 @@
     <p>This is using a simple bar chart to compare the two. Click or tap on a bar to highlight it visually
       to make it more useful in a screenshot.</p>
     <oi-bar-chart
-      data-src='data/test.json'
+      data-src='data/llm.json'
       keys='@pillars'
     >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
     </oi-bar-chart>
     <p>We can also use theme colours:</p>
     <oi-bar-chart
-      data-src='data/test.json'
+      data-src='data/llm.json'
       keys='@pillars'
       use-theme='true'
     >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
@@ -219,24 +224,24 @@
       to make it more useful in a screenshot.</p>
     <p></p>
     <oi-bullet-chart
-      data-src='data/test.json'
+      data-src='data/llm.json'
       keys='@pillars'
     >
     </oi-bullet-chart>
     <h2>Radial charts side-by-side</h2>
     <p>Example of side-by-side layout</p>
     <div style='display:flex; justify-content: center'>
-      <oi-country name='country' data-src='data/test_map.json'>
+      <oi-country name='country' data-src='data/llm_map.json'>
         <oi-radial-barchart
-          data-src='data/test.json'
+          data-src='data/llm.json'
           name='country'
           keys='@pillars'
           use-theme='true'
         >Select a country to view a chart of their pillars.</oi-radial-barchart>
       </oi-country>
-      <oi-country name='benchmark' data-src='data/test_map.json'>
+      <oi-country name='benchmark' data-src='data/llm_map.json'>
         <oi-radial-barchart
-          data-src='data/test.json'
+          data-src='data/llm.json'
           name='benchmark'
           keys='@pillars'
           use-theme='true'
@@ -250,19 +255,19 @@
     <h1>Tables and heatmaps</h1>
     <p>Sometimes its useful to just display a table.</p>
     <div style='height:340px; overflow: scroll; width:100%'>
-      <oi-country-list data-src='data/test.json' columns='country,region,@pillars' sort-by='country'
+      <oi-country-list data-src='data/llm.json' columns='country,region,@pillars' sort-by='country'
                        sort='asc'></oi-country-list>
     </div>
     <p>Also available as a heatmap</p>
     <div style='width:100%'>
-      <oi-country-list data-src='data/test.json' columns='country,@pillars'
+      <oi-country-list data-src='data/llm.json' columns='country,@pillars'
                        heatmap='true'
                        sort-by='country'
                        sort='asc'></oi-country-list>
     </div>
     <p>Also available as a themed heatmap</p>
     <div style='width:100%'>
-      <oi-country-list data-src='data/test.json' columns='country,@pillars'
+      <oi-country-list data-src='data/llm.json' columns='country,@pillars'
                        heatmap='true'
                        sort-by='country'
                        use-theme='true'
@@ -276,24 +281,24 @@
       pretty 'messy' as there are a lot of them! Below are some examples.</p>
     <h2>Radial with indicators (themed)</h2>
     <oi-radial-barchart
-      data-src='data/test.json'
+      data-src='data/llm.json'
       keys='@indicators'
       use-theme='true'
     >Select a country to view a chart of their indicators.</oi-radial-barchart>
     <h2>Radial charts side-by-side with indicators</h2>
     <p>Example of side-by-side layout</p>
     <div style='display:flex; justify-content: center'>
-      <oi-country name='country' data-src='data/test_map.json'>
+      <oi-country name='country' data-src='data/llm_map.json'>
         <oi-radial-barchart
-          data-src='data/test.json'
+          data-src='data/llm.json'
           name='country'
           keys='@indicators'
           use-theme='true'
         >Select a country to view a chart of their pillars.</oi-radial-barchart>
       </oi-country>
-      <oi-country name='benchmark' data-src='data/test_map.json'>
+      <oi-country name='benchmark' data-src='data/llm_map.json'>
         <oi-radial-barchart
-          data-src='data/test.json'
+          data-src='data/llm.json'
           name='benchmark'
           keys='@indicators'
           use-theme='true'
@@ -302,18 +307,18 @@
     </div>
     <p>Example of side-by-side layout - without labels</p>
     <div style='display:flex; justify-content: center'>
-      <oi-country name='country' data-src='data/test_map.json'>
+      <oi-country name='country' data-src='data/llm_map.json'>
         <oi-radial-barchart
-          data-src='data/test.json'
+          data-src='data/llm.json'
           name='country'
           keys='@indicators'
           use-theme='true'
           show-labels='false'
         >Select a country to view a chart of their pillars.</oi-radial-barchart>
       </oi-country>
-      <oi-country name='benchmark' data-src='data/test_map.json'>
+      <oi-country name='benchmark' data-src='data/llm_map.json'>
         <oi-radial-barchart
-          data-src='data/test.json'
+          data-src='data/llm.json'
           name='benchmark'
           keys='@indicators'
           use-theme='true'
@@ -325,7 +330,7 @@
 
     <h2>Bar chart with indicators (themed)</h2>
     <oi-bar-chart
-      data-src='data/test.json'
+      data-src='data/llm.json'
       keys='@indicators'
       size='small'
       use-theme='true'
@@ -335,14 +340,14 @@
     <oi-filter
       name='pillar'
       label='Select a pillar to see its indicators'
-      data-src='data/test.json'
+      data-src='data/llm.json'
       column-name='@pillars'
       description='Indicators are organised into pillars of related indicators'
     >
     </oi-filter>
     <p></p>
     <oi-bar-chart
-      data-src='data/test.json'
+      data-src='data/llm.json'
       keys='@indicators'
       pillar='Effectiveness'
       use-theme='true'
@@ -368,22 +373,22 @@
 
   <h1>"Dark" theme - may be nice alternative for country profiles?</h1>
   <section class='dark profile'>
-      <oi-country name='country' data-src='data/test_map.json' theme='dark'>
-        <oi-radial-barchart data-src='data/test.json' name='country' keys='@indicators' use-theme='true'
+      <oi-country name='country' data-src='data/llm_map.json' theme='dark'>
+        <oi-radial-barchart data-src='data/llm.json' name='country' keys='@indicators' use-theme='true'
           show-labels='false' theme='dark'
         >Select a country to view a chart of their pillars.</oi-radial-barchart>
-        <oi-bar-chart data-src='data/test.json' compare-with='' keys='@pillars' use-theme='true' theme='dark'
+        <oi-bar-chart data-src='data/llm.json' compare-with='' keys='@pillars' use-theme='true' theme='dark'
         >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
         </oi-bar-chart>
       </oi-country>
   </section>
 
   <section class='dark profile'>
-      <oi-country name='country' data-src='data/test_map.json' theme='dark'>
-        <oi-radial-barchart data-src='data/test.json' name='country' keys='@pillars' use-theme='true'
+      <oi-country name='country' data-src='data/llm_map.json' theme='dark'>
+        <oi-radial-barchart data-src='data/llm.json' name='country' keys='@pillars' use-theme='true'
                             show-labels='false' theme='dark'
         >Select a country to view a chart of their pillars.</oi-radial-barchart>
-        <oi-bar-chart data-src='data/test.json' compare-with='' keys='@pillars' use-theme='true' theme='dark'
+        <oi-bar-chart data-src='data/llm.json' compare-with='' keys='@pillars' use-theme='true' theme='dark'
         >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
         </oi-bar-chart>
       </oi-country>
@@ -391,19 +396,19 @@
 
   <section class='dark'>
     <div style='display:flex; justify-content: center'>
-      <oi-country name='country' data-src='data/test_map.json' theme='dark'>
-        <oi-radial-barchart data-src='data/test.json' name='country' keys='@indicators' use-theme='true'
+      <oi-country name='country' data-src='data/llm_map.json' theme='dark'>
+        <oi-radial-barchart data-src='data/llm.json' name='country' keys='@indicators' use-theme='true'
                             show-labels='false' theme='dark'
         >Select a country to view a chart of their pillars.</oi-radial-barchart>
-        <oi-bar-chart data-src='data/test.json' compare-with='' keys='@pillars' use-theme='true' theme='dark'
+        <oi-bar-chart data-src='data/llm.json' compare-with='' keys='@pillars' use-theme='true' theme='dark'
         >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
         </oi-bar-chart>
       </oi-country>
-      <oi-country name='benchmark' data-src='data/test_map.json' theme='dark'>
-        <oi-radial-barchart data-src='data/test.json' name='benchmark' keys='@indicators' use-theme='true'
+      <oi-country name='benchmark' data-src='data/llm_map.json' theme='dark'>
+        <oi-radial-barchart data-src='data/llm.json' name='benchmark' keys='@indicators' use-theme='true'
                             show-labels='false' theme='dark'
         >Select a country to view a chart of their pillars.</oi-radial-barchart>
-        <oi-bar-chart data-src='data/test.json' name='benchmark' compare-with='' keys='@pillars' use-theme='true' theme='dark'
+        <oi-bar-chart data-src='data/llm.json' name='benchmark' compare-with='' keys='@pillars' use-theme='true' theme='dark'
         >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
         </oi-bar-chart>
       </oi-country>
