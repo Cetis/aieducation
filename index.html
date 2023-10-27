@@ -168,26 +168,26 @@
                 enable-search='true'
                 description='Select a country to view in the chart below.'
         ></oi-filter>
-        <oi-bar-chart
+        <!-- <oi-bar-chart
                 data-src='data/llm.json'
                 keys='@pillars'
         >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
         </oi-bar-chart>
-        <p>We can also use theme colours:</p>
+        <p>We can also use theme colours:</p> -->
         <oi-bar-chart
                 data-src='data/llm.json'
                 keys='@pillars'
                 use-theme='true'
         >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
         </oi-bar-chart>
-        <p>We also have a smaller variant:</p>
+        <!-- <p>We also have a smaller variant:</p>
         <oi-bar-chart
                 data-src='data/llm.json'
                 keys='@pillars'
                 use-theme='true'
                 size='small'
         >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
-        </oi-bar-chart>
+        </oi-bar-chart> -->
         <h1>Radial charts for country profiles</h1>
         <p>Examples below of 'country profile' views using a radial chart.</p>
         <oi-country data-src='data/llm_map.json'>
@@ -197,9 +197,9 @@
                     use-theme='true'
             >Select a country to view a chart of their pillars.
             </oi-radial-barchart>
-            <oi-fact numerator-name='Region Rank' denominator-name='CountRegion'></oi-fact>
+            <!-- <oi-fact numerator-name='Region Rank' denominator-name='CountRegion'></oi-fact>
             <oi-fact numerator-name='Rank' denominator='172'></oi-fact>
-            <oi-fact numerator-name='Index' denominator='100'></oi-fact>
+            <oi-fact numerator-name='Index' denominator='100'></oi-fact> -->
         </oi-country>
     </section>
 
@@ -228,12 +228,12 @@
         <h2>Bar chart</h2>
         <p>This is using a simple bar chart to compare the two. Click or tap on a bar to highlight it visually
             to make it more useful in a screenshot.</p>
-        <oi-bar-chart
+        <!-- <oi-bar-chart
                 data-src='data/llm.json'
                 keys='@pillars'
         >Select a country (and, optionally, another to compare against) to view a chart of their indicators.
         </oi-bar-chart>
-        <p>We can also use theme colours:</p>
+        <p>We can also use theme colours:</p> -->
         <oi-bar-chart
                 data-src='data/llm.json'
                 keys='@pillars'
@@ -281,13 +281,13 @@
             <oi-country-list data-src='data/llm.json' columns='country,region,@pillars' sort-by='country'
                              sort='asc'></oi-country-list>
         </div>
-        <p>Also available as a heatmap</p>
+        <!-- <p>Also available as a heatmap</p>
         <div style='width:100%'>
             <oi-country-list data-src='data/llm.json' columns='country,@pillars'
                              heatmap='true'
                              sort-by='country'
                              sort='asc'></oi-country-list>
-        </div>
+        </div> -->
         <p>Also available as a themed heatmap</p>
         <div style='width:100%'>
             <oi-country-list data-src='data/llm.json' columns='country,@pillars'
@@ -388,21 +388,21 @@
         <p>The sharing buttons here are dynamically built using the selections made above. This means
             its possible to share a link with the country, comparison, pillars etc already selected.</p>
         <div style='display:flex; justify-content: center'>
-            <oi-share text='' url='https://www.oxfordinsights.com/ucd-test' hashtags='ucd,hcd,data'>Share this page on
+            <oi-share text='' url='https://cetis.github.io/aieducation/' hashtags='AI,LLM,data,education'>Share this page on
                 Twitter
             </oi-share>
-            <oi-share service='facebook' text='' url='https://www.oxfordinsights.com/ucd-test' hashtags='ucd,hcd,data'>
+            <oi-share service='facebook' text='' url='https://cetis.github.io/aieducation/' hashtags='AI,LLM,data,education'>
                 Share
                 this page on Facebook
             </oi-share>
-            <oi-share service='linkedin' text='' url='https://www.oxfordinsights.com/ucd-test' hashtags='ucd,hcd,data'>
+            <oi-share service='linkedin' text='' url='https://cetis.github.io/aieducation/' hashtags='AI,LLM,data,education'>
                 Share
                 this page on LinkedIn
             </oi-share>
         </div>
     </section>
 
-    <h1>"Dark" theme - may be nice alternative for country profiles?</h1>
+    <h1>Highlighting Country Profiles</h1>
     <section class='dark profile'>
         <oi-country name='country' data-src='data/llm_map.json' theme='dark'>
             <oi-radial-barchart data-src='data/llm.json' name='country' keys='@indicators' use-theme='true'
