@@ -58,29 +58,36 @@
 
 <main>
     <section>
-        <h1>Speculative Maps to explore Large Language Models in Education</h1>
-        <p>This is the introduction to what is here, and why it exists. </p>
+        <div>
+        <h1 style="text-align: center">Speculative Maps to explore Large Language Models in Education</h1>
+        
+        <p>This project is to be used a prompt or speculative tool to help stakeholders consider how to measure, visualise and compare pillars and indicators that reflect the various impacts of Large Language Models on Education.</p>
+
         <h2>Pillars and Indicators</h2>
         <p>Here is context for pillars and indicators that can help act as speculation for data gathering and evaluation
             frameworks for Large Language Models (LLM) in education.</p>
+        
+        <h3 style='color: var(--pillar-one)'>Educational Readiness</h3>
+        <p>This pillar identifies a number of indicators that speak to the readiness of education providers regarding the utilisation and responses to LLMs in a country. This also speaks to the experiences of educators.</p>
         <ol>
-            <li>Educational Readiness</li>
-            <ol>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
-            </ol>
-            <li>Tea</li>
-            <li>Milk</li>
-            <li>Soda</li>
+            <li>Coffee: Black, no sugar.</li>
+            <li>Tea: 4 minute brew, milk, no sugar.</li>
+            <li>Milk: Cold.</li>
         </ol>
+        <h3 style='color: var(--pillar-two)'>Learner Experience</h3>
+        <p>What are the experiences of learners?</p>
+        <h3 style='color: var(--pillar-three)'>Policy Readiness</h3>
+        <p>How have government, regulators and public policy responded to the proliferation of LLM? </p>
+        <h3 style='color: var(--pillar-four)'>Technology Readiness</h3>
+        <p>This pillar speaks to how LLMs are being deployed and utilised across digital technologies in a region.</p>
+    </div>
     </section>
     <section>
         <!-- these are all the properties you can set for the map -->
         <h1>Maps</h1>
-        <p>The first example is a map with a filter. The filter is used to select a pillar to visualise.
-            The map also acts as a filter - click or tap a country and it will be selected in the other charts.</p>
-        <p>Maps can be constrained within a column, or fill the available space.</p>
+        <p>The maps use a filter to show the aggregate score from a particular pillar. The filter is used to select a pillar to visualise.
+        The map also acts as a filter - click or tap a country and it will be selected in the other charts.</p>
+        <!-- <p>Maps can be constrained within a column, or fill the available space.</p> -->
         <div>
             <oi-filter
                     label='Select a pillar:'
@@ -104,13 +111,13 @@
                 tooltip-background-colour='white'
                 tooltip-colour='black'>
         </oi-map> -->
-        <h3>Theme-based colouring</h3>
+        <!-- <h3>Theme-based colouring</h3>
         <oi-filter
                 label='Select a pillar:'
                 data-src='data/llm.json'
                 column-name='@pillars'
-        >
-        </oi-filter>
+        > -->
+        <!-- </oi-filter> -->
         <oi-map
                 id='map'
                 style='height:600px'
